@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+html { font-size: 62.5%; }  /* 기본 폰트 크기는 10px */
+body { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+.mo { display: none; }
+.container { width: 1240px; margin: auto; }
+
+/* 기본상태 1240 이상 */
+header { width: 1240px; 
+  margin: auto; 
+  height: 80px; 
+  padding: 0 20px;
+  display: flex; 
+  align-items: center; }
+
+h1 { font-size: 5px; 
+  font-size: 3rem;
+  font-weight: bold; }
+h1 img { width: 60px; 
+  vertical-align: middle; }
+
+nav { flex-grow: 1; }
+nav > ul { padding: 0 0 0 60px; }
+nav > ul > li { float: left; margin: 0 15px; }
+nav > ul > li > a { font-size: 1.8rem; }
+
+.top_menu {  display: flex; align-items: center;}
+.top_menu a { display: inline-block; 
+margin: 0 2px; 
+width: 50px; 
+height: 50px; 
+text-indent: -9999px; 
+background-image: url('../img/css_sprites.png'); 
+opacity: 0.9; 
+transition: 0.6s;
+transform: scale(0.6); 
+padding: 0; 
+}
+
+.top_menu a:nth-child(1) { background-position: -10px -10px; }
+.top_menu a:nth-child(2) { background-position: -10px -78px; }
+.top_menu a:nth-child(3) { background-position: -10px -150px; }
+.top_menu a:nth-child(4) { background-position: -10px -219px; }
+
+
+#main_visual { width: 100%; 
+  height: 500px; }
+
+#main_visual > div { height: 100%; }
+#main_visual > div > img { width: 100%; 
+  height: 100%; 
+  object-fit: cover; }
+
+main { margin-top: 5%;}
+
+section { padding: 40px 20px; }
+
+/* con1 */
+.con1 { width: 1240px;
+margin: auto;
+display: flex;
+flex-direction: column;   
+align-items: center;
+gap: 3rem; }
+
+.text h1{ text-align: center; 
+  margin-bottom: 3rem;}
+.text p { text-align: center; 
+  font-size: 2rem;  
+  margin-top: 0; 
+  font-weight: 20; 
+  line-height: 1.5; }
+
+.img-wrap { display: flex; 
+  gap: 2rem; 
+  justify-content: center; 
+  margin-top: 4rem; }
+
+.con1 article img { width: 300px; 
+height: 300px;
+object-fit: cover;
+border: 0.1rem solid #cacaca;
+border-radius: 2rem; }
+
+/* con3 */
+.con3 { margin-top: 80px;  }
+.con3 h1 { text-align: center; 
+  font-size: 4rem; 
+  text-transform: uppercase; 
+  margin-bottom: 3rem; }
+
+.con3 .list { display: flex; 
+  justify-content: center; 
+  flex-wrap: wraps; }
+
+.con3 .list li {   
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.con3 img { width: 220px;        
+  height: 140px;       
+  object-fit: contain; 
+  display: block;
+}
+.con3 span {  
+  text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  font-size: 1.7rem; 
+  margin-top: 2rem; 
+  opacity: 0.9; }
+
+
+/* con4 */
+.con4 { margin-top: 100px;  }
+.con4 .row { display: flex; 
+  gap: 2rem; 
+  margin-bottom: 2rem; }
+.con4 .row > * { flex: 50%; }
+.con4 .row .img { text-align: center; }
+.con4 .row .img img { width: 90%; 
+  height: auto; 
+  padding: auto; 
+  border-radius: 1.2rem;}
+
+.con4 .text { }
+.con4 .text h1 { text-align: center; 
+  font-size: 3rem; 
+  margin-bottom: 3rem; }
+.con4 .text p { text-align: center; 
+  font-size: 2rem; 
+  font-weight: 20; 
+  line-height: 1.5;}
+
+
+/* con5 */
+.con5 { margin-top: 80px;  }
+.con5 h1 { font-weight: bold; 
+  text-align: center; 
+  font-size: 3rem; 
+  margin-bottom: 3rem; }
+
+.con5 .list { display: flex; }
+.con5 .list li { flex-basis: 33.33%; 
+  padding: 2rem; }
+.con5 .list a { border: 1px solid transparent; 
+  display: block; 
+  border-radius: 1rem; 
+  box-shadow: 0 0.6rem 0 #353434; 
+  overflow: hidden; }
+
+.header { height: 220px; 
+  overflow: hidden; 
+  width: 100%; }
+.header img { width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block;}
+
+.desc { text-align: center; 
+  padding: 1.6rem 2rem; 
+  background: #fff; }
+.desc h4 { font-size: 2rem; 
+  margin-bottom: 1.6rem; 
+  font-weight: 700; }
+.desc p { font-size: 1.6rem; 
+  line-height: 1.4; 
+  color: #999; }
+
+.con5 .list a:hover { border: 2px solid #666666; box-shadow: 0 0.6rem 0 #bebebe; }
+
+/* 1240 작을때 */
+@media screen and (max-width:1199px) {
+  header, .con1, .container { width: 100%; }
+}
+
+/* 1000 보다 작을때 */
+@media (max-width:1000px) {
+h1 { font-size: 2.6rem; }
+nav > ul { padding: 0 0 0 40px; }
+nav > ul > li { float: left; margin: 0 10px; }
+nav > ul > li > a { font-size: 1.6rem; }
+.top_menu a.pc { display: none; }
+
+.con1 article {
+    flex: 1 1 48%;          
+  }
+  .con1 article img {
+    width: 100%;
+    height: auto;}
+
+
+.con3 .list { flex-wrap: wrap; }
+.con3 .list li { flex: 50%; }
+.con3 span { display: -webkit-box; 
+  -webkit-box-orient: vertical; /* 박스방향 */ 
+  -webkit-line-clamp: 2; /* 라인수 */
+  overflow: hidden; 
+  }
+
+  .con5 .list { flex-wrap: wrap; padding: 0 6rem; }
+  .con5 .list li { flex-basis: 100%; padding: 2rem; }
+
+}
+
+/* 768 보다 작을때 - 큰 모바일 */
+@media (max-width:767px) {
+
+  .mo { display: block; }
+
+  header { justify-content: space-between; }
+
+  nav { position: fixed; 
+    top: 0; left: -100%; width: 70%; height: 100%; background: #868686; color: #fff; transition: 0.3s ease-in; }
+  nav > ul { padding: 100px 0 0 60px; }
+  nav > ul > li { float: none; margin: 0; height: 50px; }
+  nav > ul > li > a { font-size: 2.8rem; }
+  .btn_close { position: absolute; top: 20px; right: 20px; }
+
+    .con1 {
+    flex-wrap: wrap; width: 100%; height: auto;
+    gap: 1rem;
+  }
+
+  
+  }
+
+  #main_visual { height: 400px; }
+
+  .section { padding: 40px 20px; }
+
+  .con4 .row .img { order: 1; }
+
+
+/* 640 보다 작을때 - 보통 모바일 */
+@media (max-width:640px) {
+  .con1 { gap: 1rem; }
+  .con1 article { height: 10rem; }
+  .con1 article:nth-child(1),
+  .con1 article:nth-child(2),
+  .con1 article:nth-child(3) { flex-basis: 100%; }
+
+  .con4 .row { flex-wrap: wrap; }
+  .con4 .row > * { flex: 100%; }
+
+  .con4 .row .img img { width: 95%; }
+  .con4 .text h1 { text-align: center; }
+  .con4 .text p { display: none; }
+
+  .con5 .list { padding: 0; }
+  .con5 .list li { padding: 2rem 0; }
+
+}
+
+/* 340 보다 작을때 - 작은모바일 */
+@media (max-width:340px) {
+  h1 span { display: none; }
+  #main_visual { height: 300px; }
+
+  .con3 .list li { flex: 100%; }
+  .con3 { margin-top: 0.5rem; }
+}
